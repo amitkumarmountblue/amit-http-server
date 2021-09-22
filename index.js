@@ -5,9 +5,7 @@ const app = express();
 const { v4: uuidv4 } = require("uuid");
 
 app.get("/html", (req, res) => {
-  res
-     .status(200)
-     .sendFile(path.join(__dirname, "index.html"));
+  res.status(200).sendFile(path.join(__dirname, "index.html"));
 });
 app.get("/json", (req, res) => {
   res.status(200).sendFile(path.join(__dirname, "data.json"));
